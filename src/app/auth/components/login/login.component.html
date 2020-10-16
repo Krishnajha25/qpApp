@@ -4,7 +4,8 @@
             <div class="form-container">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" name="username" formControlName="username" id="username" placeholder="e.g. johndoe">
+                    <input type="text" name="username" formControlName="username" id="username"
+                        placeholder="e.g. johndoe">
                 </div>
                 <br>
                 <div class="form-group">
@@ -13,8 +14,11 @@
                 </div>
                 <br>
                 <div class="submit-forget-wrapper">
-                    <button type="submit" class="btn btn-purple raised">Login</button>
-                    <a href="#"><p>Forgot password?</p></a>
+                    <button type="submit" class="btn btn-purple raised"><a routerLink="/dashboard"
+                            routerLinkActive="active">Login</a></button>
+                    <a href="#">
+                        <p>Forgot password?</p>
+                    </a>
                 </div>
             </div>
         </form>
@@ -33,6 +37,8 @@
         </div>
         <br>
         <!-- <a href="#"><p class="center">Register here.</p></a> -->
-        <a [routerLink]="[ '/auth/register' ]"><p class="center">Register here</p></a>
+        <a [routerLink]="[ '/auth/register' ]">
+            <p class="center">Register here</p>
+        </a>
     </div>
 </div>
