@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder,FormGroup,  Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -8,77 +8,67 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class FormComponent {
   addressForm = this.fb.group({
-    company: [null, Validators.required],
-    firstName: [null, Validators.required],
-    lastName: [null, Validators.required],
-    
-    state: [null, Validators.required],
+    question: [null, Validators.required],
+    stream: [null, Validators.required],
+    subject: [null, Validators.required],
+    semester: [null, Validators.required],
+    module: [null, Validators.required],
+    questionType: [null, Validators.required],
+    difficultyLevel: [null, Validators.required],
+    taxonomyLevel: [null, Validators.required],
     
   });
 
   hasUnitNumber = false;
 
-  states = [
-    {name: 'Alabama', abbreviation: 'AL'},
-    {name: 'Alaska', abbreviation: 'AK'},
-    {name: 'American Samoa', abbreviation: 'AS'},
-    {name: 'Arizona', abbreviation: 'AZ'},
-    {name: 'Arkansas', abbreviation: 'AR'},
-    {name: 'California', abbreviation: 'CA'},
-    {name: 'Colorado', abbreviation: 'CO'},
-    {name: 'Connecticut', abbreviation: 'CT'},
-    {name: 'Delaware', abbreviation: 'DE'},
-    {name: 'District Of Columbia', abbreviation: 'DC'},
-    {name: 'Federated States Of Micronesia', abbreviation: 'FM'},
-    {name: 'Florida', abbreviation: 'FL'},
-    {name: 'Georgia', abbreviation: 'GA'},
-    {name: 'Guam', abbreviation: 'GU'},
-    {name: 'Hawaii', abbreviation: 'HI'},
-    {name: 'Idaho', abbreviation: 'ID'},
-    {name: 'Illinois', abbreviation: 'IL'},
-    {name: 'Indiana', abbreviation: 'IN'},
-    {name: 'Iowa', abbreviation: 'IA'},
-    {name: 'Kansas', abbreviation: 'KS'},
-    {name: 'Kentucky', abbreviation: 'KY'},
-    {name: 'Louisiana', abbreviation: 'LA'},
-    {name: 'Maine', abbreviation: 'ME'},
-    {name: 'Marshall Islands', abbreviation: 'MH'},
-    {name: 'Maryland', abbreviation: 'MD'},
-    {name: 'Massachusetts', abbreviation: 'MA'},
-    {name: 'Michigan', abbreviation: 'MI'},
-    {name: 'Minnesota', abbreviation: 'MN'},
-    {name: 'Mississippi', abbreviation: 'MS'},
-    {name: 'Missouri', abbreviation: 'MO'},
-    {name: 'Montana', abbreviation: 'MT'},
-    {name: 'Nebraska', abbreviation: 'NE'},
-    {name: 'Nevada', abbreviation: 'NV'},
-    {name: 'New Hampshire', abbreviation: 'NH'},
-    {name: 'New Jersey', abbreviation: 'NJ'},
-    {name: 'New Mexico', abbreviation: 'NM'},
-    {name: 'New York', abbreviation: 'NY'},
-    {name: 'North Carolina', abbreviation: 'NC'},
-    {name: 'North Dakota', abbreviation: 'ND'},
-    {name: 'Northern Mariana Islands', abbreviation: 'MP'},
-    {name: 'Ohio', abbreviation: 'OH'},
-    {name: 'Oklahoma', abbreviation: 'OK'},
-    {name: 'Oregon', abbreviation: 'OR'},
-    {name: 'Palau', abbreviation: 'PW'},
-    {name: 'Pennsylvania', abbreviation: 'PA'},
-    {name: 'Puerto Rico', abbreviation: 'PR'},
-    {name: 'Rhode Island', abbreviation: 'RI'},
-    {name: 'South Carolina', abbreviation: 'SC'},
-    {name: 'South Dakota', abbreviation: 'SD'},
-    {name: 'Tennessee', abbreviation: 'TN'},
-    {name: 'Texas', abbreviation: 'TX'},
-    {name: 'Utah', abbreviation: 'UT'},
-    {name: 'Vermont', abbreviation: 'VT'},
-    {name: 'Virgin Islands', abbreviation: 'VI'},
-    {name: 'Virginia', abbreviation: 'VA'},
-    {name: 'Washington', abbreviation: 'WA'},
-    {name: 'West Virginia', abbreviation: 'WV'},
-    {name: 'Wisconsin', abbreviation: 'WI'},
-    {name: 'Wyoming', abbreviation: 'WY'}
+  streams = [
+    {name: 'Computers', abbreviation: 'CMPN'},
+    {name: 'Electrical', abbreviation: 'ELEC'},
+    {name: 'Mechanical', abbreviation: 'MECH'},
+    {name: 'Information Technology', abbreviation: 'IT'},
+    
   ];
+  subjects = [
+    {name: 'AOA', abbreviation: 'CMPN'},
+    {name: 'AISC', abbreviation: 'ELEC'},
+    {name: 'ASDF', abbreviation: 'MECH'},
+    {name: 'CSL', abbreviation: 'IT'},
+    
+  ];
+  semesters = [
+    {name: 'SEM 1', abbreviation: 'CMPN'},
+    {name: 'SEM 2', abbreviation: 'ELEC'},
+    {name: 'SEM 3', abbreviation: 'MECH'},
+    {name: 'SEM 4', abbreviation: 'IT'},
+    
+  ];
+  modules = [
+    {name: 'Module 1', abbreviation: 'CMPN'},
+    {name: 'Module 2', abbreviation: 'ELEC'},
+    {name: 'Module 3', abbreviation: 'MECH'},
+    {name: 'Module 4', abbreviation: 'IT'},
+    
+  ];
+  questionTypes = [
+    {name: 'Short Note', abbreviation: 'CMPN'},
+    {name: 'Differentiate', abbreviation: 'ELEC'},
+    {name: 'Brief', abbreviation: 'MECH'},
+    {name: 'Numerical', abbreviation: 'IT'},
+  ];
+  difficultyLevels = [
+    {name: 'Easy', abbreviation: 'CMPN'},
+    {name: 'Moderate', abbreviation: 'ELEC'},
+    {name: 'Hard', abbreviation: 'MECH'},
+    
+    
+  ];
+  taxonomyLevels = [
+    {name: 'Evaluation', abbreviation: 'CMPN'},
+    {name: 'Understanding', abbreviation: 'ELEC'},
+   
+    
+  ];
+  
 
   constructor(private fb: FormBuilder) {}
 

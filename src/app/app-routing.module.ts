@@ -20,7 +20,7 @@ const routes: Routes = [
   // },
   {
     path: 'addQuestion',
-    component: AddquestionComponent,
+    component: FormComponent,
     // canActivate: [AuthGuard]
   },
   {
