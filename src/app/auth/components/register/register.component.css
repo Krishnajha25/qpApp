@@ -1,8 +1,17 @@
 .login-component{
-    height: 100vh;
-    width: 100vw;
-    /* background: url('../../../../assets/exam.svg') center left no-repeat; */
-    background-size: 60% 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+}
+
+.img-card{
+    width: 50%;
+}
+
+.img-card img{
+    width: 100%;
 }
 
 .card{
@@ -12,10 +21,10 @@
     background: #fff;
     border-radius: 5px;
     box-shadow: 5px 5px 10px #a8a8a8;
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 65%; */
+    /* transform: translate(-50%, -50%); */
 }
 
 .form-container{

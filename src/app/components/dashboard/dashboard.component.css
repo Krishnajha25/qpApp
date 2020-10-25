@@ -1,37 +1,39 @@
-h1 {
-    
-    padding-left: 2rem;
-  font-size: 2.5rem;
-  left: 8rem;
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.card {
-  width: 500px;
-  min-height: 450px;
-  padding: 20px;
-  background: rgb(215, 235, 238);
-  border-radius: 5px;
-  position: absolute;
-  top: 60%;
-  left: 20%;
-  transform: translate(-50%, -50%);
+.card{
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: cornflowerblue;
+  margin-right: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s;
 }
 
-.pro-img {
-  padding-bottom: 20px;
+.card:hover{
+  box-shadow: 5px 5px 6px #3d3d3d;
 }
 
-.rounded-circle {
-  height: 8rem;
-  width: 8rem;
-
+.title{
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.form-container {
-  padding: 0px;
-}
-
-label {
-  font-size: 1.5rem;
-  font-weight: 500;
+.numbers{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
 }

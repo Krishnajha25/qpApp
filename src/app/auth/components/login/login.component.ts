@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { Router } from '@angular/router';
 import { AuthService } from "../../services/auth.service";
 
 @Component({
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private fb: FormBuilder,
+    private router: Router,
   ) { }
 
 
@@ -39,6 +41,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.loginForm.value)
       localStorage.setItem('loggedIn','true')
       this.loggedIn = localStorage.getItem('loggedIn')
+      this.router.navigate['/']
     }else{
       console.log("Please fill all the fields");
     }

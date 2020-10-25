@@ -1,4 +1,7 @@
 <div class="login-component">
+    <div class="img-card">
+        <img src="../../../../assets/exam.svg" alt="">
+    </div>
     <div class="card">
         <form method="POST" [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
             <div class="form-container">
@@ -14,8 +17,7 @@
                 </div>
                 <br>
                 <div class="submit-forget-wrapper">
-                    <button type="submit" class="btn btn-purple raised"><a routerLink="/dashboard"
-                            routerLinkActive="active">Login</a></button>
+                    <button type="submit" class="btn btn-purple raised">Login</button>
                     <a href="#">
                         <p>Forgot password?</p>
                     </a>
