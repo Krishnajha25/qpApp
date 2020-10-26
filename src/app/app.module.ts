@@ -24,7 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { AddquestionComponent } from './components/addquestion/addquestion.component';
+
 import { ProfileComponent } from './components/profile/profile.component';
 import { FormComponent } from './components/form/form.component';
 import { MatRadioModule } from '@angular/material/radio';
@@ -37,7 +37,6 @@ import { MatCardModule } from '@angular/material/card';
     NavigationComponent,
     HomeComponent,
     DashboardComponent,
-    AddquestionComponent,
     ProfileComponent,
     FormComponent
   ],
